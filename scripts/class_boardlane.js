@@ -1,4 +1,4 @@
-BoardLane = function(){
+var BoardLane = function(){
   // Init
 }
 

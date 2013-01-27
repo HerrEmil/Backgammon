@@ -18,12 +18,16 @@ Backgammon = (function(){
   var init = function() {
     console.log('All loaded!');
 
-    var newBoardLane = new BoardLane();
-    console.log('BoardLane:', newBoardLane);
-    console.log('BoardLane.getOccupiedPosition:', newBoardLane.getOccupiedPosition);
+    var boardLanes = new Array(4);
+    for (var i=0; i < 4; i++) {
+      boardLanes[i] = Layout.createLane();
+      Layout.addLane(boardLanes[i]);
+    }
   }
 
   LazyLoad.js([
+    SCRIPTDIR + 'module_layout.js',
+    SCRIPTDIR + 'module_layout_lane.js',
     SCRIPTDIR + 'class_boardlane.js'
   ], init);
 
