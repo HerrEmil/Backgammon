@@ -1,8 +1,9 @@
 /*
 Four lanes
-Each lane has a bunch of positions
+Each lane has 24 positions
 Each position contains 0 - 5 pieces of either color, one color at a time
 Pieces move in one direction, up or down, depending on team
+Amount of moves per turn is 14, dividable across the lane
 
 */
 
@@ -17,13 +18,13 @@ Backgammon = (function(){
   var init = function() {
     console.log('All loaded!');
 
-    var newBoardPane = new BoardPane();
-    console.log('BoardPane:', newBoardPane);
-    console.log('BoardPane.getOccupiedPosition:', newBoardPane.getOccupiedPosition);
+    var newBoardLane = new BoardLane();
+    console.log('BoardLane:', newBoardLane);
+    console.log('BoardLane.getOccupiedPosition:', newBoardLane.getOccupiedPosition);
   }
 
   LazyLoad.js([
-    SCRIPTDIR + 'class_boardpane.js'
+    SCRIPTDIR + 'class_boardlane.js'
   ], init);
 
 })();
