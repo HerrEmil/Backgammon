@@ -16,6 +16,10 @@ Backgammon = (function(){
 
   var init = function() {
     console.log('All loaded!');
+
+    var newBoardPane = new BoardPane();
+    console.log('BoardPane:', newBoardPane);
+    console.log('BoardPane.getOccupiedPosition:', newBoardPane.getOccupiedPosition);
   }
 
   LazyLoad.js([

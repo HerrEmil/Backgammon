@@ -1,7 +1,7 @@
-BoardPlane = function(){
+BoardPane = function(){
   // Init
 }
 
-BoardPlane.prototype.getOccupiedPosition = function(){
+BoardPane.prototype.getOccupiedPosition = function(){
   // Stuff
 }
